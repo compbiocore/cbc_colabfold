@@ -1,5 +1,9 @@
 site_name: Colabfold on OSCAR
 nav:
   - Home: index.md
-  - About: about.md
-theme: readthedocs
+  - Quickstart: quickstart.md
+  - Building from Docker: docker.md
+  - Local MSA Generation: msas.md
+theme:
+  name: readthedocs
+  logo: img/oscarcolabfold.png
