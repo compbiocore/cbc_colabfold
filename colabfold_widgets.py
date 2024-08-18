@@ -56,6 +56,12 @@ msa_mode_w = widgets.Dropdown(
     description='msa_mode:'
 )
 
+custom_msa_w = widgets.Text(
+    value='',
+    placeholder='Filepath to custom MSA (if using custom)',
+    description='custom_msa:',
+)
+
 pair_mode_w = widgets.Dropdown(
     options=['unpaired_paired', 'paired', 'unpaired'],
     value='unpaired_paired',
@@ -65,6 +71,8 @@ pair_mode_w = widgets.Dropdown(
 display(HTML('<h3>MSA options (custom MSA upload, single sequence, pairing mode)</h3>'))
 
 display(msa_mode_w)
+
+display(custom_msa_w)
 
 display(pair_mode_w)
 display(HTML('<p>"unpaired_paired" = pair sequences from same ' \
