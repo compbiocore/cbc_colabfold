@@ -6,6 +6,14 @@ Welcome to ColabFold! The following instructions will help you get the ColabFold
 
 First, clone our [Git repo](https://github.com/compbiocore/cbc_colabfold) into your desired directory on OSCAR.
 
+## Pull Singularity Image
+
+Next, pull the Singularity image in this same directory using the following command:
+
+```bash
+singularity pull docker://ryanleexr/cbc_colabfold
+```
+
 ## Set Up Notebook
 
 ### Option 1: Run via Jupyter Notebook for Apptainer Images
