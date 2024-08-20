@@ -14,8 +14,8 @@ The batch script ```generate_msas.sh``` is included in the repo. In that directo
 sbatch generate_msas.sh /path/to/input_sequence.fasta /path/to/databases msas
 ```
 
+This will generate your MSAs in a folder called "msas" in your current directory. Depending on the length of your input sequence, the script may take multiple hours to run.
+
 ## Add MSA Filepath and Run Notebook
 
 Open the ColabFold Jupyter notebook as normal (see [Quickstart](quickstart.md)), and run the first cell to display the widgets. Then, in the ```custom_msas``` field, insert the path to your MSAs (it will probably be something like ```msas/(NAME_OF_MSAS).a3m```. Finally, run all following cells as per normal.
-
-
