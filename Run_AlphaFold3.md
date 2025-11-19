@@ -17,7 +17,8 @@ python /app/alphafold/run_alphafold.py \
 --json_path=/root/af_inputs/fold_input.json \
 --db_dir=/root/public_database \
 --output_dir=/root/af_outputs \
---model_dir=/root/models
+--model_dir=/root/models \ 
+--flash_attention_implementation = xla
 ```
 
 ## Orientation
@@ -77,5 +78,6 @@ python /app/alphafold/run_alphafold.py \
 --json_path=$INPUT \
 --db_dir=/root/public_database \
 --output_dir=/root/af_outputs \
---model_dir=/root/models
+--model_dir=/root/models \
+--flash_attention_implementation = xla
 ```

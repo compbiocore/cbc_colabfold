@@ -37,3 +37,25 @@ python /app/alphafold/run_alphafold.py \
 --pdb70_database_path=/root/public_database/pdb70/pdb70 \
 --use_gpu_relax=True
 ```
+
+4. Run the AlphaFold2 command (using shared AlphaFold3 databases, more up to-date databases):
+
+```commandline
+singularity exec \
+--bind /gpfs/data/shared/databases/refchef_refs/alphafold_data/primary/alphafold_data:/root/public_database \
+--bind $HOME/out_dir:/root/out_dir \
+--nv /gpfs/data/shared/databases/refchef_refs/alphafold_data/primary/alphafold_v2.2.2.simg \
+python /app/alphafold/run_alphafold.py \
+--data_dir=/root/public_database \
+--fasta_paths=/root/out_dir/T1050.fasta \
+--output_dir=/root/out_dir \
+--max_template_date=2022-01-01 \
+--uniref90_database_path=/root/public_database/alphafold3_databases/uniref90_2022_05.fa \
+--mgnify_database_path=/root/public_database/alphafold3_databases/mgy_clusters_2022_05.fa \
+--template_mmcif_dir=/root/public_database/alphafold3_databases/mmcif_files \
+--obsolete_pdbs_path=/root/public_database/pdb_mmcif/obsolete.dat \
+--bfd_database_path=/root/public_database/bfd/bfd_metaclust_clu_complete_id30_c90_final_seq.sorted_opt  \
+--uniclust30_database_path=/root/public_database/uniclust30/uniclust30_2018_08/uniclust30_2018_08 \
+--pdb70_database_path=/root/public_database/pdb70/pdb70 \
+--use_gpu_relax=True
+```
